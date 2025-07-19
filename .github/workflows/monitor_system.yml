@@ -1,0 +1,37 @@
+name: Monitor system resources
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '* * * * *'
+
+
+jobs:
+   monitor_system:
+       runs-on: ubuntu-latest
+
+       steps:
+         
+          - name: Checkout
+            uses: actions/checkout@v4.2.2
+
+          - name: Install shellcheck and verify
+            
+            run: |
+                sudo apt install shellcheck
+                shellcheck /workspaces/linux-system-monitor/src/monitor_sys.sh
+
+
+          - name: Execute the script based on schedule
+          
+            run: |
+                sh /workspaces/linux-system-monitor/src/monitor_sys.sh
+
+
+
+
+          
+          
+
+         
