@@ -3,7 +3,7 @@
 # Define the threshold for CPU, Memory and Disk usages
 
 CPU_THRESHOLD=80
-MEMORY_THERSHOLD=80
+MEMORY_THRESHOLD=80
 DISK_THRESHOLD=80
 
 # Function to send an alert
