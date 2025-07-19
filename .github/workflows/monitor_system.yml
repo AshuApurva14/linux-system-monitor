@@ -20,13 +20,13 @@ jobs:
             
             run: |
                 sudo apt install shellcheck
-                shellcheck /workspaces/linux-system-monitor/src/monitor_sys.sh
+                shellcheck src/monitor_sys.sh
 
 
           - name: Execute the script based on schedule
           
             run: |
-                sh /workspaces/linux-system-monitor/src/monitor_sys.sh
+                sh src/monitor_sys.sh
 
 
 
