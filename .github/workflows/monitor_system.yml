@@ -3,8 +3,8 @@ name: Monitor system resources
 on:
   workflow_dispatch:
 
-  schedule:
-    - cron: '* * * * *'
+  # schedule:
+  #   - cron: '* * * * *'
 
 
 jobs:
